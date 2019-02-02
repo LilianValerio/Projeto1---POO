@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import br.com.codenation.aceleradev.rec.loja.LojaSql;
+import br.com.codenation.aceleradev.rec.loja.util.SQLQuery;
 import br.com.codenation.aceleradev.rec.loja.bean.Produto;
 import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConectionFactory;
 import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
@@ -28,7 +28,7 @@ public class ProdutoDao{
 	public static List<Produto> buscarPorCategoria(CategoriaProduto categoria) {
 		
 		conexao = new ConectionFactory().getConexaoMySQL();
-		String sql = LojaSql.SELECT_PRODUTOS_CATEGORIA; 
+		String sql = SQLQuery.SELECT_PRODUTOS_CATEGORIA;
 		try {
 			PreparedStatement statemant;
 			statemant = conexao.prepareStatement(sql);

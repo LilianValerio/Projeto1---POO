@@ -9,16 +9,17 @@ import java.sql.SQLException;
 
 public class UserBusiness  implements UserInterface{
 
-	public static String validarCpf(String cpf) {
+	public static boolean validarCpf(String cpf) {
 		UsuarioDao usuarioDao = UsuarioDao.getInstance();
 		try{
-			if(usuarioDao.validarCpf(cpf)){
-				return User.getInstance().getCpf();
-			}
-		}catch (Exception e){
-			return e.getMessage();
+			return usuarioDao.validarCpf(cpf);
+		}catch (CpfInvalidoException e){
+			throw e;
+		}catch (SQLException e){
+			//TODO: tirar isso depois
+			e.printStackTrace();
 		}
-		return "";
+		return false;
 
 	}
 

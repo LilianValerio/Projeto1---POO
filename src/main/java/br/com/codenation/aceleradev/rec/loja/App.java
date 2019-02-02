@@ -1,7 +1,10 @@
 package br.com.codenation.aceleradev.rec.loja;
 
+import br.com.codenation.aceleradev.rec.loja.bean.User;
 import br.com.codenation.aceleradev.rec.loja.business.UserBusiness;
+import br.com.codenation.aceleradev.rec.loja.exceptions.CpfInvalidoException;
 import br.com.codenation.aceleradev.rec.loja.interfaces.UserInterface;
+import br.com.codenation.aceleradev.rec.loja.util.Const;
 
 import java.util.Scanner;
 
@@ -15,19 +18,27 @@ public class App
     {
         System.out.println( "Projeto Codenation" );
         
-        String cpf = "";
-        int i = 0;
+        String entradaUsuario;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Digite seu cpf:");
-        cpf = scanner.nextLine();
-        /*while(scanner.hasNext()){
-          i++;
-          cpf = scanner.next();
-        }*/
 
-        System.out.println(UserBusiness.validarCpf(cpf));
-        
+        boolean usuarioCriadoComSucesso = false;
+        boolean usuarioDesistiu = false;
+        while(!usuarioDesistiu && !usuarioCriadoComSucesso){
+            System.out.print(">>>>>>>>>>>>>>>>>>>>>> Digite seu CPF para logar ou -1 para sair: <<<<<<<<<<<<<<<<<<<<<<<<<\n");
+            entradaUsuario = scanner.nextLine();
+            if(!entradaUsuario.equalsIgnoreCase(Const.FLAG_SAIDA)){
+                try {
+                    usuarioCriadoComSucesso = UserBusiness.validarCpf(entradaUsuario);
+                }catch (CpfInvalidoException e){
+                    System.out.println(e.getMessage());
+                }
+
+            }else{
+                usuarioDesistiu = true;
+            }
+        }
+
         scanner.close();
       
     }    
-    }
+}

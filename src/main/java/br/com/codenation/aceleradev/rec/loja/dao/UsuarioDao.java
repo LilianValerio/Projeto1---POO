@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import br.com.codenation.aceleradev.rec.loja.LojaSql;
+import br.com.codenation.aceleradev.rec.loja.util.SQLQuery;
 import br.com.codenation.aceleradev.rec.loja.bean.User;
 import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConectionFactory;
 import br.com.codenation.aceleradev.rec.loja.exceptions.CpfInvalidoException;
@@ -29,7 +29,7 @@ public class UsuarioDao {
 		ResultSet resposta;
 		PreparedStatement statement;
 		try {
-			statement = conexao.prepareStatement(LojaSql.SELECT_USUARIO_CPF);
+			statement = conexao.prepareStatement(SQLQuery.SELECT_USUARIO_CPF);
 			statement.setString(1, cpf);
 
 			resposta = statement.executeQuery();
