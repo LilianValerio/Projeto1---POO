@@ -1,4 +1,4 @@
-package codenation.project;
+package br.com.codenation.aceleradev.rec.loja;
 
 /**
  * Hello world!
