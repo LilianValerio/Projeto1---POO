@@ -65,7 +65,7 @@ public class ConexaoJDBC {
 
 	}
 	
-	public static boolean FecharConexao() {
+	public static boolean fecharConexao() {
 
 		try {
 
@@ -81,9 +81,9 @@ public class ConexaoJDBC {
 
 	}
 
-	public static java.sql.Connection ReiniciarConexao() {
+	public static java.sql.Connection reiniciarConexao() {
 
-		FecharConexao();
+		fecharConexao();
 
 		return ConexaoJDBC.getConexaoMySQL();
 
