@@ -1,11 +1,13 @@
 package br.com.codenation.aceleradev.rec.loja.dao;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import br.com.codenation.aceleradev.rec.loja.LojaSql;
-import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConexaoJDBC;
+import br.com.codenation.aceleradev.rec.loja.bean.User;
+import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConectionFactory;
 import br.com.codenation.aceleradev.rec.loja.exceptions.CpfInvalidoException;
 
 public class UsuarioDao {
@@ -21,30 +23,31 @@ public class UsuarioDao {
 		return instance;
 	}
 	
-	public Boolean validarCpf(String cpf) throws CpfInvalidoException {
-			
-		Boolean existeCpf = false ;
-		
-		ConexaoJDBC conexao = new ConexaoJDBC();
-		conexao.getConexaoMySQL();
-		ResultSet resultado= null;
-		
-		PreparedStatement query = null;
+	public boolean validarCpf(String cpf) throws CpfInvalidoException, SQLException {
+
+		Connection conexao = ConectionFactory.getConexaoMySQL();
+		ResultSet resposta;
+		PreparedStatement statement;
 		try {
-		 	resultado = query.executeQuery(LojaSql.SELECT_USUARIO_CPF);
-			if(resultado != null) {
-				existeCpf = true;
+			statement = conexao.prepareStatement(LojaSql.SELECT_USUARIO_CPF);
+			statement.setString(1, cpf);
+
+			resposta = statement.executeQuery();
+
+			if(resposta.next()){
+				User usuario = User.getInstance();
+				usuario.setCpf(resposta.getString("cpf"));
+				usuario.setId(resposta.getInt("id"));
+				usuario.setNome(resposta.getString("nome"));
 			}else {
 				throw new CpfInvalidoException();
 			}
 
 		} catch (SQLException e) {
-			e.printStackTrace();
+			throw e;
 		}
-		
 
-		
-		return existeCpf;
+		return true;
 		
 	}
 	

@@ -17,16 +17,17 @@ public class App
         
         String cpf = "";
         int i = 0;
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Digite seu cpf:");
-        while(sc.hasNext()){
+        cpf = scanner.nextLine();
+        /*while(scanner.hasNext()){
           i++;
-          cpf = sc.next();
-        }
+          cpf = scanner.next();
+        }*/
 
         System.out.println(UserBusiness.validarCpf(cpf));
         
-        sc.close(); 
+        scanner.close();
       
     }    
     }

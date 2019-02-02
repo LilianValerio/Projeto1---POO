@@ -6,7 +6,7 @@ import java.util.List;
 public class User {
 
     private static User instance;
-    private Long id;
+    private Integer id;
     private String nome;
     private String cpf;
     private Carrinho carrinho;
@@ -22,11 +22,11 @@ public class User {
 
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

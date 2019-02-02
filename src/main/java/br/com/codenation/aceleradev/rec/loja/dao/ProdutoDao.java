@@ -4,13 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.List;
 
-import com.mysql.cj.xdevapi.Statement;
-
 import br.com.codenation.aceleradev.rec.loja.LojaSql;
 import br.com.codenation.aceleradev.rec.loja.bean.Produto;
-import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConexaoJDBC;
+import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConectionFactory;
 import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
-import br.com.codenation.aceleradev.rec.loja.interfaces.ProdutoInterface;
 
 public class ProdutoDao{
 
@@ -30,7 +27,7 @@ public class ProdutoDao{
 
 	public static List<Produto> buscarPorCategoria(CategoriaProduto categoria) {
 		
-		conexao = new ConexaoJDBC().getConexaoMySQL(); 
+		conexao = new ConectionFactory().getConexaoMySQL();
 		String sql = LojaSql.SELECT_PRODUTOS_CATEGORIA; 
 		try {
 			PreparedStatement statemant;
@@ -39,7 +36,7 @@ public class ProdutoDao{
 			
 		}
 		finally {
-			ConexaoJDBC.fecharConexao();			
+			ConectionFactory.fecharConexao();
 		}
 		
 		categoria.ordinal();
