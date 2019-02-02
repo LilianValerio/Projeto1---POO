@@ -11,18 +11,14 @@ public class User {
     private String cpf;
     private Carrinho carrinho;
 
-    public User getInstance(Long id, String nome, String cpf){
+    public static User getInstance(){
         if(instance == null){
-            instance = new User(id, nome, cpf);
+            instance = new User();
         }
         return instance;
     }
 
-    private User(Long id, String nome, String cpf) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.carrinho = new Carrinho(id);
+    private User() {
 
     }
 

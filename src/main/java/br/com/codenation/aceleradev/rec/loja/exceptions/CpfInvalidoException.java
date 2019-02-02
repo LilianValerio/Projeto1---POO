@@ -1,6 +1,6 @@
 package br.com.codenation.aceleradev.rec.loja.exceptions;
 
-import br.com.codenation.aceleradev.rec.loja.util.Error;
+import br.com.codenation.aceleradev.rec.loja.util.Messages;
 
 public class CpfInvalidoException extends RuntimeException {
 
@@ -10,6 +10,6 @@ public class CpfInvalidoException extends RuntimeException {
 
     @Override
     public String getMessage() {
-        return Error.ERRO_CPF_INVALIDO;
+        return Messages.ERRO_CPF_INVALIDO;
     }
 }

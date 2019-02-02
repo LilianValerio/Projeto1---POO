@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import br.com.codenation.aceleradev.rec.loja.LojaSql;
 import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConexaoJDBC;
+import br.com.codenation.aceleradev.rec.loja.exceptions.CpfInvalidoException;
 
 public class UsuarioDao {
 
@@ -20,7 +21,7 @@ public class UsuarioDao {
 		return instance;
 	}
 	
-	public Boolean validarCpf(String cpf) {
+	public Boolean validarCpf(String cpf) throws CpfInvalidoException {
 			
 		Boolean existeCpf = false ;
 		
@@ -30,13 +31,15 @@ public class UsuarioDao {
 		
 		PreparedStatement query = null;
 		try {
-		 resultado=  query.executeQuery(LojaSql.SELECT_USUARIO_CPF);
+		 resultado = query.executeQuery(LojaSql.SELECT_USUARIO_CPF);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
 		if(resultado != null) {
 			existeCpf = true;
+		}else {
+			throw new CpfInvalidoException();
 		}
 		
 		

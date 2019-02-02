@@ -1,5 +1,8 @@
 package br.com.codenation.aceleradev.rec.loja;
 
+import br.com.codenation.aceleradev.rec.loja.business.UserBusiness;
+import br.com.codenation.aceleradev.rec.loja.interfaces.UserInterface;
+
 import java.util.Scanner;
 
 /**
@@ -20,7 +23,8 @@ public class App
           i++;
           cpf = sc.next();
         }
-        
+
+        System.out.println(UserBusiness.validarCpf(cpf));
         
         sc.close(); 
       
