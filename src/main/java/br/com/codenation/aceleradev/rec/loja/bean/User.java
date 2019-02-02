@@ -1,15 +1,28 @@
 package br.com.codenation.aceleradev.rec.loja.bean;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
 
+    private static User instance;
     private Long id;
     private String nome;
     private String cpf;
+    private List<Produto> carrinho;
 
-    public User(Long id, String nome, String cpf) {
+    public User getInstance(Long id, String nome, String cpf){
+        if(instance == null){
+            instance = new User(id, nome, cpf);
+        }
+        return instance;
+    }
+
+    private User(Long id, String nome, String cpf) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
+        this.carrinho = new ArrayList<>();
     }
 
     public Long getId() {
