@@ -1,22 +1,23 @@
 package br.com.codenation.aceleradev.rec.loja.bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
 
-    private User user;
+    private Long user;
     private List<Item> itens;
 
-    public Carrinho(User user, List<Item> itens) {
+    public Carrinho(Long user) {
         this.user = user;
-        this.itens = itens;
+        this.itens = new ArrayList<Item>();
     }
 
-    public User getUser() {
+    public Long getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 

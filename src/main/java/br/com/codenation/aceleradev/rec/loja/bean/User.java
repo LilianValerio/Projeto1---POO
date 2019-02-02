@@ -9,7 +9,7 @@ public class User {
     private Long id;
     private String nome;
     private String cpf;
-    private List<Produto> carrinho;
+    private Carrinho carrinho;
 
     public User getInstance(Long id, String nome, String cpf){
         if(instance == null){
@@ -22,11 +22,8 @@ public class User {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
-<<<<<<< HEAD
-        this.carrinho = new ArrayList<Produto>();
-=======
-        this.carrinho = new ArrayList();
->>>>>>> 1e482fc4b2f5cd822b4a1d9ea107eb66e764b737
+        this.carrinho = new Carrinho(id);
+
     }
 
     public Long getId() {
