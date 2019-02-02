@@ -22,7 +22,7 @@ public class User {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
-        this.carrinho = new ArrayList<>();
+        this.carrinho = new ArrayList<Produto>();
     }
 
     public Long getId() {

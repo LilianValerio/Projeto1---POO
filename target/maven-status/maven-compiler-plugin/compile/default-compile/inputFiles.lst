@@ -1,2 +1,10 @@
 C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\App.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\bean\User.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\interfaces\UserInterface.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\bean\Filme.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\bean\Produto.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\business\UserBusiness.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\LojaSql.java
 C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\conexaoBanco\ConexaoJDBC.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\dao\UsuarioDao.java
+C:\Users\Lilian\eclipse-workspace\Projeto1---POO\src\main\java\br\com\codenation\aceleradev\rec\loja\enums\CategoriaProduto.java
