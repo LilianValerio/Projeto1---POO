@@ -2,7 +2,7 @@ package br.com.codenation.aceleradev.rec.loja.bean;
 
 import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
 
-public class Produto {
+public abstract class Produto {
 
     private Long id;
     private String descricao;
