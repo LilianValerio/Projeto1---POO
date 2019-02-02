@@ -31,17 +31,18 @@ public class UsuarioDao {
 		
 		PreparedStatement query = null;
 		try {
-		 resultado = query.executeQuery(LojaSql.SELECT_USUARIO_CPF);
+		 	resultado = query.executeQuery(LojaSql.SELECT_USUARIO_CPF);
+			if(resultado != null) {
+				existeCpf = true;
+			}else {
+				throw new CpfInvalidoException();
+			}
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		if(resultado != null) {
-			existeCpf = true;
-		}else {
-			throw new CpfInvalidoException();
-		}
-		
+
 		
 		return existeCpf;
 		
