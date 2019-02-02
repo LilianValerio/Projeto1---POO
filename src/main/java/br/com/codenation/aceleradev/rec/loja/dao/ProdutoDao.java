@@ -14,8 +14,20 @@ import br.com.codenation.aceleradev.rec.loja.interfaces.ProdutoInterface;
 
 public class ProdutoDao{
 
+	private static ProdutoDao instance;
 	private static Connection conexao;
-	
+
+	private ProdutoDao() {
+
+	}
+
+	public static ProdutoDao getInstance(){
+		if(instance == null){
+			instance = new ProdutoDao();
+		}
+		return instance;
+	}
+
 	public static List<Produto> buscarPorCategoria(CategoriaProduto categoria) {
 		
 		conexao = new ConexaoJDBC().getConexaoMySQL(); 

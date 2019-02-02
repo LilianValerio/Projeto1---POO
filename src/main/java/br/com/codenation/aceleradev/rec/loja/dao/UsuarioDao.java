@@ -8,7 +8,17 @@ import br.com.codenation.aceleradev.rec.loja.LojaSql;
 import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConexaoJDBC;
 
 public class UsuarioDao {
-	
+
+	private static UsuarioDao instance;
+
+	private UsuarioDao(){}
+
+	public static UsuarioDao getInstance(){
+		if(instance == null){
+			instance = new UsuarioDao();
+		}
+		return instance;
+	}
 	
 	public Boolean validarCpf(String cpf) {
 			
