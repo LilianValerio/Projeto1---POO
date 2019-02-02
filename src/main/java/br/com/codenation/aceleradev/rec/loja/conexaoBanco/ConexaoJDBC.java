@@ -14,7 +14,7 @@ public class ConexaoJDBC {
 
 	}
 	
-	public static java.sql.Connection getConexaoMySQL() {
+	public static Connection getConexaoMySQL() {
 
 		Connection connection = null;
 
@@ -81,7 +81,7 @@ public class ConexaoJDBC {
 
 	}
 
-	public static java.sql.Connection reiniciarConexao() {
+	public static Connection reiniciarConexao() {
 
 		fecharConexao();
 
