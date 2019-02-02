@@ -12,11 +12,11 @@ import br.com.codenation.aceleradev.rec.loja.conexaoBanco.ConexaoJDBC;
 import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
 import br.com.codenation.aceleradev.rec.loja.interfaces.ProdutoInterface;
 
-public class ProdutoDao implements ProdutoInterface{
+public class ProdutoDao{
 
 	private static Connection conexao;
 	
-	public List<Produto> buscarPorCategoria(CategoriaProduto categoria) {
+	public static List<Produto> buscarPorCategoria(CategoriaProduto categoria) {
 		
 		conexao = new ConexaoJDBC().getConexaoMySQL(); 
 		String sql = LojaSql.SELECT_PRODUTOS_CATEGORIA; 
@@ -31,8 +31,7 @@ public class ProdutoDao implements ProdutoInterface{
 		}
 		
 		categoria.ordinal();
-		
-		
+
 		return null;
 	}
 

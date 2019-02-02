@@ -7,5 +7,9 @@ import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
 
 public interface ProdutoInterface {
 
-	List<Produto> buscarPorCategoria(CategoriaProduto categoria);
+	public List<Produto> buscarPorCategoria(CategoriaProduto categoria);
+
+	public boolean inserirProdutoNoCarrinho(Long idProduto);
+
+
 }
