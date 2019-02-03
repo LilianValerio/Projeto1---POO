@@ -29,10 +29,9 @@ public class ConectionFactory {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}finally {
-			return con;
 		}
 
+		return con;
 	}
 
 	public static boolean fecharConexao() {
