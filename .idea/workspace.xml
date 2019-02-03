@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb53c2c-9901-4a4a-b16e-fe57f8b911e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/bean/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/bean/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/dao/UsuarioDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+            <state relative-caret-position="404">
+              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -43,7 +43,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/App.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
@@ -69,6 +69,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
               <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="25" column="71" lean-forward="true" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,15 +121,15 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/util/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/interfaces/UserInterface.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConexaoJDBC.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/dao/UsuarioDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/SQLQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/util/SQLQuery.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/util/Const.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/business/UserBusiness.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/bean/Produto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/dao/UsuarioDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java" />
       </list>
     </option>
   </component>
@@ -242,7 +254,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549154525626" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549155089522" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -304,18 +316,17 @@
       <option name="presentableId" value="Default" />
       <updated>1549117404685</updated>
       <workItem from="1549117417465" duration="13258000" />
-      <workItem from="1549144404152" duration="6781000" />
+      <workItem from="1549144404152" duration="7009000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20039000" />
+    <option name="totallyTimeSpent" value="20267000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -333,7 +344,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17828201" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33225283" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -503,27 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/dao/UsuarioDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -576,6 +570,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/dao/UsuarioDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/codenation/aceleradev/rec/loja/conexaoBanco/ConectionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="25" column="71" lean-forward="true" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
