@@ -4,11 +4,11 @@ import br.com.codenation.aceleradev.rec.loja.enums.CategoriaProduto;
 
 public abstract class Produto {
 
-    private Long id;
-    private String descricao;
-    private Double preco;
-    private Double qtdEstoque;
-    private CategoriaProduto categoria;
+    protected Long id;
+    protected String descricao;
+    protected Double preco;
+    protected Double qtdEstoque;
+    protected CategoriaProduto categoria;
 
     public Produto(Long id, String descricao, Double preco, Double qtdEstoque, CategoriaProduto categoria) {
         this.id = id;

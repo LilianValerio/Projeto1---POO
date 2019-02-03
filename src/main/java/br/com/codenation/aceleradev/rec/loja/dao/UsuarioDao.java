@@ -45,6 +45,8 @@ public class UsuarioDao {
 
 		} catch (SQLException e) {
 			throw e;
+		}finally {
+			conexao.close();
 		}
 
 		return true;

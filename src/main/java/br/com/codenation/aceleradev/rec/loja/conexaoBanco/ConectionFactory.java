@@ -13,7 +13,7 @@ public class ConectionFactory {
 	private static final String USERNAME = "adminproj";
 	private static final String PASSWORD = "FSFU06hq";
 
-	public static String status = "Não conectou...";
+	private static Connection con;
 
 	public ConectionFactory() {
 
@@ -21,18 +21,16 @@ public class ConectionFactory {
 	
 	public static Connection getConexaoMySQL() {
 
-		Connection connection = null;
-
 		try {
 			Class.forName(DRIVER);
-			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			con = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
-			return connection;
+			return con;
 		}
 
 	}
